@@ -6,13 +6,13 @@ export class Detail extends React.Component<DetailProps, {}> {
     return (
       <div>
         <div className="classification-name">
-          ${this.props.classification.name}
+          {this.props.classification.name}
         </div>
         <div className="description">
-          ${this.props.classification.description}
+          {this.props.classification.description}
         </div>
         <div className="unit-price">
-          ${this.props.classification.unitPrice}円
+          {this.props.classification.unitPrice}円
         </div>
         <div className="num-people">
           <select value={this.props.classification.numOfPeople}>
