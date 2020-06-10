@@ -9,3 +9,7 @@ type FeeClassification = {
 export type DetailProps = {
   classification: FeeClassification
 }
+
+export type DetailState = {
+  numOfPeople: number
+}

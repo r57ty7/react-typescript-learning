@@ -1,7 +1,7 @@
 import React from 'react'
 import { Detail } from './Detail'
 import { Summary } from './Summary'
-import { DetailProps } from './feeClassification'
+import { DetailProps } from './types'
 
 export class AdmissionFeeCalculator extends React.Component {
   private detail: DetailProps[] = [
