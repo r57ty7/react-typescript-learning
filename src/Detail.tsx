@@ -1,14 +1,21 @@
 import React from 'react'
+import { DetailProps } from './feeClassification'
 
-export class Detail extends React.Component {
+export class Detail extends React.Component<DetailProps, {}> {
   render() {
     return (
       <div>
-        <div className="classification-name">名前</div>
-        <div className="description">説明</div>
-        <div className="unit-price">0円</div>
+        <div className="classification-name">
+          ${this.props.classification.name}
+        </div>
+        <div className="description">
+          ${this.props.classification.description}
+        </div>
+        <div className="unit-price">
+          ${this.props.classification.unitPrice}円
+        </div>
         <div className="num-people">
-          <select value="0">
+          <select value={this.props.classification.numOfPeople}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
