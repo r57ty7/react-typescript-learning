@@ -1,4 +1,4 @@
-type FeeClassification = {
+export type FeeClassification = {
   name: string
   description: string
   unitPrice: number
@@ -12,4 +12,8 @@ export type DetailProps = {
 
 export type DetailState = {
   numOfPeople: number
+}
+
+export type AdmissionFeeCalculatorState = {
+  feeClassifications: FeeClassification[]
 }
