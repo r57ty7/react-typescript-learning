@@ -8,6 +8,7 @@ export type FeeClassification = {
 
 export type DetailProps = {
   classification: FeeClassification
+  onNumOfPeopleChange: (num: number) => void
 }
 
 export type DetailState = {
@@ -16,4 +17,9 @@ export type DetailState = {
 
 export type AdmissionFeeCalculatorState = {
   feeClassifications: FeeClassification[]
+}
+
+export type SummaryProps = {
+  numOfPeople: number
+  totalAmount: number
 }

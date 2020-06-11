@@ -11,9 +11,7 @@ export class Detail extends React.Component<DetailProps, DetailState> {
 
   onNumOfPeopleChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const num: number = Number(e.target.value)
-    this.setState({
-      numOfPeople: num,
-    })
+    this.props.onNumOfPeopleChange(num)
   }
 
   render() {
@@ -30,7 +28,7 @@ export class Detail extends React.Component<DetailProps, DetailState> {
         </div>
         <div className="num-people">
           <select
-            value={this.state.numOfPeople}
+            value={this.props.classification.numOfPeople}
             onChange={(e) => this.onNumOfPeopleChange(e)}
           >
             <option value="0">0</option>

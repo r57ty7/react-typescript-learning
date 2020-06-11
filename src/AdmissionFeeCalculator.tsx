@@ -61,13 +61,26 @@ export class AdmissionFeeCalculator extends React.Component<
   }
 
   render() {
-    const detailsJsx = this.detail.map((fc, idx) => {
-      return <Detail key={idx.toString()} classification={fc.classification} />
+    const details = this.state.feeClassifications.map((fc, idx) => {
+      return (
+        <Detail
+          key={idx.toString()}
+          classification={fc}
+          onNumOfPeopleChange={(n) => this.handleNumOfPeopleChange(idx, n)}
+        />
+      )
     })
+    const numOfPeople = this.state.feeClassifications
+      .map((fc) => fc.numOfPeople)
+      .reduce((p, c) => p + c)
+    const totalAmount = this.state.feeClassifications
+      .map((fc) => fc.totalPrice)
+      .reduce((p, c) => p + c)
+
     return (
       <>
-        {detailsJsx}
-        <Summary />
+        {details}
+        <Summary numOfPeople={numOfPeople} totalAmount={totalAmount} />
       </>
     )
   }
