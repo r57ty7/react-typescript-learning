@@ -16,9 +16,9 @@ export class AdmissionFeeCalculator extends React.Component<
     const adult: FeeClassification = {
       name: '大人',
       description: '',
+      unitPrice: 1000,
       numOfPeople: 0,
-      totalPrice: 1000,
-      unitPrice: 0,
+      totalPrice: 0,
     }
 
     const student: FeeClassification = {
